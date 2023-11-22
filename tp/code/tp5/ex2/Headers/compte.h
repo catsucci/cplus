@@ -2,7 +2,6 @@
 #define COMPTE_H 
 
 #include <cstring>
-#include <iostream>
 
 class Compte {
 
@@ -15,6 +14,9 @@ class Compte {
     void displayAccount() const ; 
     void addCredit (float&);
     void useCredit (float&);
+    int getID();
+    char* getName();
+    float getCredit();
 
 
   private:

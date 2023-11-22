@@ -22,7 +22,7 @@ Compte::Compte (char* name, float credit) {
 }
 
 Compte::~Compte() {
-  delete [] this->nom;
+  //delete [] this->nom;
   std::cout << "sussy baka" << std::endl;
 }
 
@@ -37,7 +37,11 @@ void Compte::displayAccount() const {
 }
 
 void Compte::addCredit (float& credit) {
-  this->solde += credit;
+  if (0 > credit) {
+    std::cout << "How the F can you add negative money man!" << std::endl;
+  } else {
+    this->solde += credit;
+  }
 }
 
 void Compte::useCredit (float& credit) {
@@ -46,4 +50,16 @@ void Compte::useCredit (float& credit) {
   } else {
     this->solde -= credit;
   }
+}
+
+int Compte::getID() {
+  return this->num;
+}
+
+char* Compte::getName() {
+  return this->nom;
+}
+
+float Compte::getCredit() {
+  return this->solde;
 }

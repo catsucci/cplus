@@ -3,11 +3,10 @@
 #include "../Headers/compte.h"
 #include "../Sources/compte.cpp"
 
-int main (int argc, char *argv[]) {
+#include "../Headers/banque.h"
+#include "../Sources/banque.cpp"
 
-  Compte a, b(69.420); 
-  a.displayAccount();
-  b.displayAccount();
+int main (int argc, char *argv[]) {
 
   char * name = new char [50];
   std::cout << "name = ";
@@ -15,16 +14,13 @@ int main (int argc, char *argv[]) {
   Compte c(name, 420.69);
   c.displayAccount();
 
-  std::cout << "biddak falafel? ";
-  std::cin >> name;
-  a.updateName(name);
-  a.displayAccount();
-  
-  std::cout << "biddak falafel? ";
-  std::cin >> name;
-  b.updateName(name);
-  b.displayAccount();
+  Banque aa;
+  std::cout << "before" << std::endl;
+  aa.add(c);
+  std::cout << "after" << std::endl;
+  aa.getAccount(1)->displayAccount();
 
+  c.displayAccount();
   delete [] name;
   
   return 0;
