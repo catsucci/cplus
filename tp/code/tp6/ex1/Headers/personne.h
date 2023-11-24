@@ -7,13 +7,15 @@ class Personne {
 
   public:
     Personne ();
-    Personne (const char*, const char*, const int&);
+    Personne (const char *, const char *, const int &);
+    Personne (const Personne &);
     ~Personne();
+    Personne & operator = (const Personne &);
     void affiche() const;
 
   private:
-    char* nom;
-    char* prenom;
+    char * nom;
+    char * prenom;
     int age;
 };
 
