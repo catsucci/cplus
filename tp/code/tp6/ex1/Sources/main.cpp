@@ -3,8 +3,8 @@
 #include "../Headers/personne.h"
 #include "../Sources/personne.cpp"
 
-int main (int argc, char *argv[]) {
-  Personne * p1, p2 ("amogus", "imposter", 20), p3 (p2), p4;
+int main(int argc, char *argv[]) {
+  Personne *p1, p2("amogus", "imposter", 20), p3(p2), p4;
   p2.affiche();
   p1 = new Personne;
   p1->affiche();
