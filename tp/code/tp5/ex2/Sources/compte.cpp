@@ -1,34 +1,32 @@
-#include <iostream>
 #include <cstring>
+#include <iostream>
 
 #include "../Headers/compte.h"
 
 int Compte::nbCmp = 0;
 
-Compte::Compte (float credit) {
+Compte::Compte(float credit) {
   Compte::nbCmp++;
   this->num = Compte::nbCmp;
-  this->nom = new char [50];
+  this->nom = new char[50];
   strcpy(this->nom, "uknown");
-  this->solde = credit; 
+  this->solde = credit;
 }
 
-Compte::Compte (char* name, float credit) {
+Compte::Compte(char *name, float credit) {
   Compte::nbCmp++;
   this->num = Compte::nbCmp;
-  this->nom = new char [50];
+  this->nom = new char[50];
   strcpy(this->nom, name);
-  this->solde = credit; 
+  this->solde = credit;
 }
 
 Compte::~Compte() {
-  //delete [] this->nom;
+  // delete [] this->nom;
   std::cout << "sussy baka" << std::endl;
 }
 
-void Compte::updateName (char* name) {
-  strcpy(this->nom, name);
-}
+void Compte::updateName(char *name) { strcpy(this->nom, name); }
 
 void Compte::displayAccount() const {
   std::cout << "num de compte: " << this->num << std::endl;
@@ -36,7 +34,7 @@ void Compte::displayAccount() const {
   std::cout << "solde de compte: " << this->solde << std::endl;
 }
 
-void Compte::addCredit (float& credit) {
+void Compte::addCredit(float &credit) {
   if (0 > credit) {
     std::cout << "How the F can you add negative money man!" << std::endl;
   } else {
@@ -44,7 +42,7 @@ void Compte::addCredit (float& credit) {
   }
 }
 
-void Compte::useCredit (float& credit) {
+void Compte::useCredit(float &credit) {
   if (0 > credit) {
     std::cout << "How the F can you use negative money man!" << std::endl;
   } else {
@@ -52,14 +50,8 @@ void Compte::useCredit (float& credit) {
   }
 }
 
-int Compte::getID() {
-  return this->num;
-}
+int Compte::getID() { return this->num; }
 
-char* Compte::getName() {
-  return this->nom;
-}
+char *Compte::getName() { return this->nom; }
 
-float Compte::getCredit() {
-  return this->solde;
-}
+float Compte::getCredit() { return this->solde; }
