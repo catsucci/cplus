@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../Headers/compte.h"
+#include "../Sources/banque.cpp"
 #include "../Sources/compte.cpp"
 
 int main(int argc, char *argv[]) {
@@ -10,7 +10,11 @@ int main(int argc, char *argv[]) {
   std::cin >> name;
   Compte c(name, 420.69);
   c.displayAccount();
-  delete[] name;
+
+  Banque bb(5);
+  bb.add(c);
+  bb.afficheAg();
+  // constructeur de le copi
 
   return 0;
 }

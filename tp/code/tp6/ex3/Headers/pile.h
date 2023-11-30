@@ -5,7 +5,7 @@ class Pile {
 public:
   Pile(int t = 10);
   ~Pile();
-  void empile(int);
+  void empile(const int &);
   void depile();
   bool vide() const;
   bool peine() const;

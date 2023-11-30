@@ -13,7 +13,7 @@ Pile::Pile(int t) {
 
 Pile::~Pile() { delete[] this->adr; }
 
-void Pile::empile(int elem) {
+void Pile::empile(const int &elem) {
   *(this->adr + taille) = elem;
   taille++;
 }

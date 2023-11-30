@@ -43,9 +43,15 @@ void Compte::addCredit(float &credit) {
 }
 
 void Compte::useCredit(float &credit) {
-  if (0 > credit) {
-    std::cout << "How the F can you use negative money man!" << std::endl;
+  if (credit <= solde) {
+    if (0 > credit) {
+      std::cout << "How the F can you use negative money man!" << std::endl;
+    } else {
+      this->solde -= credit;
+    }
   } else {
-    this->solde -= credit;
+    std::cout << "Nigga you broke." << std::endl;
   }
 }
+
+int Compte::numCompte() const { return num; }

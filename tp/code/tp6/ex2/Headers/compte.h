@@ -12,6 +12,7 @@ public:
   void displayAccount() const;
   void addCredit(float &);
   void useCredit(float &);
+  int numCompte() const;
 
 private:
   int num;
