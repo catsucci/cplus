@@ -14,13 +14,21 @@ Pile::Pile(int t) {
 Pile::~Pile() { delete[] this->adr; }
 
 void Pile::empile(const int &elem) {
-  *(this->adr + taille) = elem;
-  taille++;
+  if (false == peine()) {
+    *(this->adr + taille) = elem;
+    taille++;
+  } else {
+    std::cout << "empile my ass";
+  }
 }
 
 void Pile::depile() {
-  *(this->adr + taille) = -0;
-  taille--;
+  if (false == vide()) {
+    *(this->adr + taille) = -0;
+    taille--;
+  } else {
+    std::cout << "depile my ass" << std::endl;
+  }
 }
 
 bool Pile::vide() const {
