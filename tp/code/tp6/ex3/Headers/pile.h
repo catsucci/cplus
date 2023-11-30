@@ -10,6 +10,7 @@ public:
   bool vide() const;
   bool peine() const;
   int donneTaille() const;
+  void affiche() const;
 
 private:
   int dim;

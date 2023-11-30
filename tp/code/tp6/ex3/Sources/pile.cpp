@@ -1,3 +1,4 @@
+#include <iostream>
 
 #include "../Headers/pile.h"
 
@@ -39,3 +40,15 @@ bool Pile::peine() const {
 }
 
 int Pile::donneTaille() const { return this->taille; }
+
+void Pile::affiche() const {
+  for (int i = 0; i < this->taille; i++) {
+    if (0 == i) {
+      std::cout << "[" << *(this->adr) << ", ";
+    } else if (this->taille - 1 == i) {
+      std::cout << *(this->adr + this->taille - 1) << "]" << std::endl;
+    } else {
+      std::cout << *(this->adr + i) << ", ";
+    }
+  }
+}

@@ -20,6 +20,13 @@ int main(int argc, char *argv[]) {
   a.empile(9);
   a.empile(8);
   cout << "a at 1:" << a.peine() << endl;
+  a.affiche();
+  a.depile();
+  a.depile();
+  a.depile();
+  a.depile();
+  a.depile();
+  a.affiche();
 
   return 0;
 }
