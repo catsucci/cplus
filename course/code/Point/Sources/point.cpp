@@ -47,3 +47,47 @@ Point Point::symetrique() {
   sym_.y = -y;
   return sym_;
 }
+
+void Point::operator=(const Point &p_) {
+  x = p_.x;
+  y = p_.y;
+}
+
+// Point *Point::symetrique() {
+// Point *sym_;
+// sym_ = new Point;
+// sym_->x = -x;
+// sym_->y = -y;
+// return sym_;
+//}
+
+// Point &Point::symetrique() {
+//  La variable sym_ est obligatoirement static pour retourner par reference
+// static Point sym_;
+// sym_.x = x;
+// sym_.y = y;
+// return sym_;
+//}
+
+Point &Point::operator+(const Point &p_) {
+  static Point res;
+  res.x = x + p_.x;
+  res.y = y + p_.y;
+  return res;
+}
+
+float Point::operator*(const Point &p_) { return (x * p_.x + y * p_.y); }
+
+Point &Point::operator*(const float &f_) {
+  static Point res;
+  res.x = x * f_;
+  res.y = y * f_;
+  return res;
+}
+
+Point &operator*(const float &f_, const Point &p_) {
+  static Point res;
+  res.x = p_.x * f_;
+  res.y = p_.y * f_;
+  return res;
+}

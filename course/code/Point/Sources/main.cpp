@@ -4,18 +4,12 @@
 #include "./point.cpp"
 
 int main(int argc, char *argv[]) {
-
-  const Point c;
+  Point a(1, 5), b(2, 1), c;
+  c = a + b;
   c.affiche();
-  Point p(1, 2), q, *r;
-  p.affiche();
-  q.saisie();
-  q.affiche();
-  Point::afficheNumOfPoints();
-  r = new Point(5);
-  r->affiche();
-  Point::afficheNumOfPoints();
-  delete r;
+  std::cout << c * b << std::endl;
+  c = 3 * b;
+  c.affiche();
 
   return 0;
 }

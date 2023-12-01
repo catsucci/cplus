@@ -17,6 +17,13 @@ public:
   }
   static void afficheNumOfPoints();
   Point symetrique();
+  void operator=(const Point &);
+  // Point *symetrique();
+  //  Point &symetrique();
+  Point &operator+(const Point &);
+  float operator*(const Point &);
+  Point &operator*(const float &);
+  friend Point &operator*(const float &, const Point &);
 
 private:
   float x;
