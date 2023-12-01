@@ -5,26 +5,24 @@
 
 class Point {
 
-  public:
-    Point();
-    Point(float);
-    Point(float, float);
-    ~Point();
-    void saisie();
-    void affiche() const {
-      std::cout << "x: " << x << std::endl;
-      std::cout << "y: " << y << std::endl;
-    }
+public:
+  Point();
+  Point(float);
+  Point(float, float);
+  ~Point();
+  void saisie();
+  void affiche() const {
+    std::cout << "x: " << x << std::endl;
+    std::cout << "y: " << y << std::endl;
+  }
+  static void afficheNumOfPoints();
+  Point symetrique();
 
-    static void afficheNumOfPoints() ;
-
-  private:
-    float x;
-    float y;
-    static int numOfPoints;
-    char* name;
-
+private:
+  float x;
+  float y;
+  static int numOfPoints;
+  char *name;
 };
 
 #endif // POINT_HPoint
-

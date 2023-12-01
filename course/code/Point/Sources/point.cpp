@@ -1,5 +1,5 @@
-#include <iostream>
 #include "../Headers/point.h"
+#include <iostream>
 
 int Point::numOfPoints = 0;
 
@@ -25,7 +25,7 @@ Point::Point(float x, float y) {
 }
 
 Point::~Point() {
-  delete [] name;
+  delete[] name;
   std::cout << "7ammoud 7ammoud" << std::endl;
 }
 
@@ -39,4 +39,11 @@ void Point::saisie() {
 
 void Point::afficheNumOfPoints() {
   std::cout << "numOfPoints: " << Point::numOfPoints << std::endl;
+}
+
+Point Point::symetrique() {
+  Point sym_;
+  sym_.x = -x;
+  sym_.y = -y;
+  return sym_;
 }
