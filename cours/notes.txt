@@ -1,0 +1,39 @@
+11/10/2023 [programmation structure VS POO]
+
+Les carateristiaues d'un bon logiciel ou application:
+  * Exactitude
+  * Robust
+  * Efficacite
+  * Portabilite
+  * Extensibilite (OOP only => Heritage)
+  * Reutilisablilite (OOP only => Polymorphisme)
+
+Prog structure:
+  programme = algo + structures de donnees
+
+Prog Orionte Objet:
+  est un ensemble d'objet qui communique entre eux
+  objet = Methodes (communication) + donnees (attributes)
+  se base sure:
+    Encapsulation => protection des donnees
+    Heritage => Reutilisablilite
+    Polymorphisme => Extensibilite
+
+Methodes => interface (la partie visible) de la classe a l'exterieur
+         => seuls les methodes de la classe qu'ont le droit d'acces au attributes
+
+
+2023-11-16 13:50
+
+We started OOP, actual opp, we coded a class Point and cited the diffreneces 
+between object and class instences/methodes
+
+inline methodes:
+  when methodes are small it is recomended to use inline methodes instead
+
+20 Dec: project QT (for desktop application)
+
+1. Exception en C++
+2. Templets en C++
+3. classe string en C++
+4. Introduction a QT
