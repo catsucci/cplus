@@ -8,30 +8,34 @@ Point::Point() {
   x = 0;
   y = 0;
   name = new char[50];
-  std::cout << "Ana lbandora l7amra" << std::endl;
+  std::cout << "default constr parent" << std::endl;
 }
 
 Point::Point(float x) {
   this->x = x;
   this->y = x;
   name = new char[50];
-  std::cout << "Ana lbandora l7amra" << std::endl;
+  std::cout << "one par constr parent" << std::endl;
 }
 
 Point::Point(float x, float y) {
   this->x = x;
   this->y = y;
   name = new char[50];
-  std::cout << "Ana lbandora l7amra" << std::endl;
+  std::cout << "two pars constr parent" << std::endl;
 }
 
 Point::Point(const Point &p_) {
   x = p_.x;
   y = p_.y;
   name = new char[std::strlen(p_.name)];
+  std::cout << "recopi construct parent" << std::endl;
 }
 
-Point::~Point() { delete[] name; }
+Point::~Point() {
+  delete[] name;
+  std::cout << "parent's ~" << std::endl;
+}
 
 void Point::saisie() {
   std::cout << "x = ";

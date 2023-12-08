@@ -18,7 +18,7 @@ Point3::Point3(const Point3 &p_) : Point(p_) {
   cout << "child's recopie constr." << endl;
 }
 
-Point3::~Point3() { cout << "Child Destruct" << endl; }
+Point3::~Point3() { cout << "Child ~" << endl; }
 
 Point3 &Point3::operator=(const Point3 &p_) {
   Point::operator=(p_);

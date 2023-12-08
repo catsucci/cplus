@@ -10,10 +10,10 @@ public:
   Point(float);
   Point(float, float);
   Point(const Point &); // constructeur de recopi
-  ~Point();
+  virtual ~Point();
 
   void saisie();
-  void affiche() const {
+  virtual void affiche() const {
     std::cout << "x: " << x << std::endl;
     std::cout << "y: " << y << std::endl;
   }
