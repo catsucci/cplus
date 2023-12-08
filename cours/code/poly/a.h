@@ -11,5 +11,7 @@ public:
     i = k;
     cout << "constructeur A " << i << endl;
   }
-  ~A() { cout << "Destructeur A " << endl; }
+  virtual ~A() { cout << "Destructeur A " << endl; }
+
+  virtual void affiche() { cout << "affiche A(): " << i << endl; }
 };

@@ -10,4 +10,9 @@ public:
     cout << "Constructeur B " << j << endl;
   }
   ~B() { cout << "Destructeur B " << endl; }
+
+  void affiche() {
+    A::affiche();
+    cout << "affiche B(): " << j << endl;
+  }
 };

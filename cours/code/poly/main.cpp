@@ -12,6 +12,12 @@ int main(int argc, char *argv[]) {
   A *a, *b;
   a = new A(10);
   b = new B(20, 30);
+
+  cout << "*** 3 ***" << endl;
+  a->affiche();
+  cout << "bbb:" << endl;
+  b->affiche();
+
   delete a;
   delete b;
 
