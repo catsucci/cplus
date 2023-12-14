@@ -76,7 +76,52 @@ bool Chaine::appart(const char &c_) const {
 }
 
 Chaine &Chaine::operator=(const Chaine &ch_) {
+  delete [] adr;
+  adr = new char [ch_.taille() + 1];
   for (int i = 0; i <= taille(); i++) {
     adr[i] = ch_[i];
   }
+  cout << "***operateur d'affectation" << endl;
+  return *this;
+}
+
+bool Chaine::operator==(const Chaine & ch_) const {
+  int i;
+  if (ch_.taille() == taille()) {
+    for (i = 0; i < taille(); i++) {
+      if (adr[i] != ch_.adr[i]) {
+        return false;
+      }
+    }
+    return true;
+  } else {
+    return false;
+  }
+}
+
+Chaine & Chaine::operator+(const Chaine & ch_) {
+  int i;
+  static Chaine res;
+  delete [] res.adr;
+  res.adr = new char [ch_.taille() + taille() + 1];
+  for (i = 0; i < taille(); i++) {
+    res.adr[i] = adr[i];
+  }
+  for (i = taille(); i <= taille() + ch_.taille(); i++) {
+    res.adr[i] = ch_.adr[i - taille()];
+  }
+  return res;
+}
+
+char Chaine::operator[] (int i_)const {
+  return adr[i_];
+}
+
+ostream & operator<<(ostream & ostr, const Chaine & ch_) {
+  ostr << ch_.adr << endl;
+  return ostr;
+}
+istream & operator>>(istream & istr, Chaine & ch_) {
+  istr >> ch_.adr;
+  return istr;
 }
