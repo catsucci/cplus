@@ -1,9 +1,9 @@
 #include "../Headers/employe.h"
-#include <iostream>
 #include <cstring>
+#include <iostream>
 
-using std::cout;
 using std::cin;
+using std::cout;
 using std::endl;
 
 Employe::Employe() {
@@ -22,16 +22,16 @@ Employe::Employe(const char *Nom_, const char *Prenom_, int Age_, int Anc_) {
   Anc = Anc_;
 }
 
- Employe::Employe(const Employe & e_) {
-  Nom = new char [strlen(e_.Nom) + 1];
+Employe::Employe(const Employe &e_) {
+  Nom = new char[strlen(e_.Nom) + 1];
   strcpy(Nom, e_.Nom);
-  Prenom = new char [strlen(e_.Prenom) + 1];
+  Prenom = new char[strlen(e_.Prenom) + 1];
   strcpy(Prenom, e_.Prenom);
   Age = e_.Age;
   Anc = e_.Anc;
 }
 
 Employe::~Employe() {
-  delete [] Nom;
-  delete [] Prenom;
+  delete[] Nom;
+  delete[] Prenom;
 }
