@@ -10,9 +10,9 @@ public:
   Chaine();
   Chaine(const char *);
   Chaine(const Chaine &);
-  ~Chaine();
+  virtual ~Chaine();
   int taille() const;
-  void affiche() const;
+  virtual void affiche() const;
   void ajout(char, int);
   void supp(int);
   Chaine &inv();
@@ -24,7 +24,7 @@ public:
   friend ostream & operator << (ostream &, const Chaine &);
   friend istream & operator >> (istream &, Chaine &);
 
-private:
+protected:
   char *adr;
 };
 
