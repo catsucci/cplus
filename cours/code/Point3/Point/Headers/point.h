@@ -9,7 +9,7 @@ public:
   Point();
   Point(float);
   Point(float, float);
-  Point(const Point &); // constructeur de recopi
+  Point(const Point &); // constructeur de recopie
   virtual ~Point();
 
   void saisie();
