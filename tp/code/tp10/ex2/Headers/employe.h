@@ -10,7 +10,7 @@ public:
   virtual double calcul_base_salaire() = 0;
   virtual void afficher();
   double calcul_salaire();
-  Employe & operator=(const Employe &);
+  Employe &operator=(const Employe &);
 
 protected:
   char *Nom;
