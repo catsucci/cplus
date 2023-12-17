@@ -1,10 +1,10 @@
 #include "../Headers/employe.h"
 #include <cstring>
-#include <iostream>
+/* #include <iostream> */
 
-using std::cin;
-using std::cout;
-using std::endl;
+/* using std::cin; */
+/* using std::cout; */
+/* using std::endl; */
 
 Employe::Employe() {
   Nom = new char[20];
