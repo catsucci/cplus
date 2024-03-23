@@ -1,6 +1,3 @@
-// #include <iostream>
-
-#include "../Headers/point.h"
 #include "./point.cpp"
 
 int main(int argc, char *argv[]) {

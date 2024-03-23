@@ -1,5 +1,4 @@
 #include "../Headers/point.h"
-#include <iostream>
 
 int Point::numOfPoints = 0;
 
