@@ -5,12 +5,16 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-int
-main (int argc, char *argv[])
+void
+saisie (int &a, int &b, int &c)
 {
-    int a, b, c;
     cout << "Type respectivly a, b and c of ax2 + bx + c = 0" << endl;
     cin >> a >> b >> c;
+}
+
+void
+calcul (const int &a, const int &b, const int &c)
+{
     // if any of a,b || c are = to 0 checks
     if (0 == a)
         {
@@ -73,5 +77,13 @@ main (int argc, char *argv[])
                          << endl;
                 }
         }
+}
+
+int
+main (int argc, char *argv[])
+{
+    int a, b, c;
+    saisie (a, b, c);
+    calcul (a, b, c);
     return 0;
 }
